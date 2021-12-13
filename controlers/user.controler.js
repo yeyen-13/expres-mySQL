@@ -50,7 +50,7 @@ module.exports={
       updateById:(req,res)=>{
         const{id}= req.params
         let updateUser = req.body
-        db.query(`update user  set username =?, email =?, password=? where id=?`,[updateUser.usename,updateUser.email,updateUser.password,id],(err,result,field)=>{
+        db.query(`update user  set username =?, email =?, password=? where id=?`,[updateUser.username, updateUser.email, updateUser.password, id],(err,result,field)=>{
           if(err){
             console.log(err)
           }
